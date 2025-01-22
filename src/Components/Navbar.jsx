@@ -115,31 +115,31 @@ const Navbar = () => {
         }`}
       >
         <a
-          href="/"
+          onClick={()=>navigate('/')}
           className="block pl-8 px-4 py-2 transition-all duration-400 ease-linear hover:text-blue-300  text-lg"
         >
          Home
         </a>
         <a
-          href="/about"
+           onClick={()=>navigate('/about')}
           className="block pl-8 px-4 py-2 transition-all duration-400 ease-linear hover:text-blue-300  text-lg"
         >
           About
         </a>
         <a
-          href="/team"
+           onClick={()=>navigate('/team')}
           className="block pl-8 px-4 py-2 transition-all duration-400 ease-linear hover:text-blue-300  text-lg"
         >
           Team
         </a>
         <a
-          href="/contact"
+           onClick={()=>navigate('/contact')}
           className="block pl-8 px-4 py-2 transition-all duration-400 ease-linear hover:text-blue-300  text-lg"
         >
           Contact us
         </a>
         <a
-          href="/Blogs"
+           onClick={()=>navigate('/Blogs')}
           className="block pl-8 px-4 py-2 transition-all duration-400 ease-linear hover:text-blue-300  text-lg"
         >
          Blogs
