@@ -5,30 +5,31 @@ const teamMembers = [
   {
     name: "Abhishek Singh",
     role: "Frontend Developer",
-    image:'Drone1.webp', // Replace with your image URL
+    image: "Drone1.webp", // Replace with your image URL
   },
   {
     name: "John Doe",
     role: "Backend Developer",
-    image:'Drone1.webp',
+    image: "Drone1.webp",
   },
   {
     name: "Jane Smith",
     role: "UI/UX Designer",
-    image:'Drone1.webp',
+    image: "Drone1.webp",
   },
   {
     name: "Emily Johnson",
     role: "Project Manager",
-    image:'Drone1.webp',
+    image: "Drone1.webp",
   },
 ];
 
 const Team = () => {
   return (
-    <div className="w-screen h-screen bg-gradient-to-b from-black to-gray-900 text-white flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-black to-gray-900 text-white">
+      {/* Header */}
       <motion.h1
-        className="text-4xl font-bold mb-8"
+        className="text-4xl font-bold mb-6 md:mb-8"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -36,6 +37,7 @@ const Team = () => {
         Meet Our Team
       </motion.h1>
 
+      {/* Team Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-6 w-full max-w-7xl">
         {teamMembers.map((member, index) => (
           <motion.div
@@ -55,6 +57,8 @@ const Team = () => {
           </motion.div>
         ))}
       </div>
+
+      
     </div>
   );
 };
