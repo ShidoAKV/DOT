@@ -1,0 +1,11 @@
+Model Information:
+* title:	SciFi Drone
+* source:	https://sketchfab.com/3d-models/scifi-drone-989a68fab9114dc2b54d13d8677988ef
+* author:	ZedFox (https://sketchfab.com/ZedFox)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "SciFi Drone" (https://sketchfab.com/3d-models/scifi-drone-989a68fab9114dc2b54d13d8677988ef) by ZedFox (https://sketchfab.com/ZedFox) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
