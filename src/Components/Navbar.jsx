@@ -9,7 +9,7 @@ const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <nav className=" sticky text-white shadow-lg  top-0 z-50   bg-black/50 ">
+    <nav className={`sticky text-white shadow-lg  top-0 z-50   bg-black/50`}>
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}

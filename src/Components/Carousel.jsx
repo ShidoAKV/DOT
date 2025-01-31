@@ -7,7 +7,7 @@ const Carousel = () => {
     <div className="bg-black  flex w-screen h-screen items-center justify-center">
       {/* Left Content */}
       <motion.div
-        className="h-full p-6 sm:md:0 md:ml-10  bg-black flex flex-col justify-center w-full md:w-2/3"
+        className="z-50 h-full p-6 sm:md:0 md:ml-10  bg-black flex flex-col justify-center w-full md:w-2/3"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}

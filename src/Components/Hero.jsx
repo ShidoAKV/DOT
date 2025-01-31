@@ -2,9 +2,11 @@ import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
   const { scene } = useGLTF('/scene.gltf'); 
+  const navigate=useNavigate();
 
   return (
 
@@ -48,8 +50,8 @@ const Hero = () => {
           Fast, efficient, and reliable deliveries at your doorstep with drone technology.
         </p>
         <a
-          href="#services"
-          className="bg-yellow-500 text-gray-900 py-3 px-6 rounded-lg text-xl hover:bg-yellow-400 transition duration-300"
+          onClick={()=>navigate('/booking')}
+          className="bg-yellow-500 cursor-pointer text-gray-900 py-3 px-6 rounded-lg text-xl hover:bg-yellow-400 transition duration-300"
         >
           Learn More
         </a>

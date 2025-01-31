@@ -8,6 +8,8 @@ import Contact from "./Components/Contact.jsx";
 import About from "./Components/About.jsx";
 import Blogs from "./Components/Blogs.jsx";
 import Team from "./Components/Team.jsx";
+import Booking from "./Components/Booking.jsx";
+import Appointment from "./Components/Appointment.jsx";
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/about' element={<About/>} />
           <Route path='/Blogs' element={<Blogs/>} />
+          <Route path='/booking' element={<Booking/>} />
+          <Route path='/Appointment' element={<Appointment/>} />
         </Routes>
         <Footersection/>
       </div>
