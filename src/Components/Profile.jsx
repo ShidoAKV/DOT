@@ -15,7 +15,7 @@ useEffect(() => {
   return (
     <div>
     {
-     token&&<div>User Profile</div>
+     token&&<div>Login successfully</div>
     }
     </div>
   )

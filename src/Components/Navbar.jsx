@@ -152,6 +152,12 @@ const Navbar = () => {
         >
          Blogs
         </a>
+        <a
+           onClick={()=>navigate('/profile')}
+          className="block pl-8 px-4 py-2 transition-all duration-400 ease-linear hover:text-blue-300  text-lg"
+        >
+         Blogs
+        </a>
         
           {/* <div
             className={`overflow-hidden transition-[max-height,opacity,transform] duration-300 ease-in-out ${
