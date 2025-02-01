@@ -43,8 +43,7 @@ const Navbar = () => {
                Team
             </motion.a>
             <motion.a
-              href="#contact"
-             className="text-lg  transition-all duration-300 ease-in-out hover:text-blue-300 hover:scale-110  "
+             className="text-lg  transition-all duration-300 ease-in-out cursor-pointer hover:text-blue-300 hover:scale-110  "
              initial={{ opacity: 0, scale: 0.8 }} 
              whileInView={{ opacity: 1, scale: 1 }} 
              transition={{ duration: 1 }}
@@ -53,14 +52,23 @@ const Navbar = () => {
               Contact Us
             </motion.a>
             <motion.a
-              href="#contact"
-             className="text-lg  transition-all duration-300 ease-in-out hover:text-blue-300 hover:scale-110  "
+             className="text-lg  transition-all duration-300 ease-in-out cursor-pointer hover:text-blue-300 hover:scale-110  "
              initial={{ opacity: 0, scale: 0.8 }} 
              whileInView={{ opacity: 1, scale: 1 }} 
              transition={{ duration: 1 }}
              onClick={()=>navigate('/Blogs')}
             >
               Blogs
+            </motion.a>
+
+            <motion.a
+             className="text-lg  transition-all duration-300 ease-in-out cursor-pointer hover:text-blue-300 hover:scale-110  "
+             initial={{ opacity: 0, scale: 0.8 }} 
+             whileInView={{ opacity: 1, scale: 1 }} 
+             transition={{ duration: 1 }}
+             onClick={()=>navigate('/profile')}
+            >
+              Profile
             </motion.a>
 
           </div>

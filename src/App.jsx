@@ -10,6 +10,9 @@ import Blogs from "./Components/Blogs.jsx";
 import Team from "./Components/Team.jsx";
 import Booking from "./Components/Booking.jsx";
 import Appointment from "./Components/Appointment.jsx";
+import AuthForm from "./Components/AuthForm.jsx";
+import Profile from "./Components/Profile.jsx";
+
 
 function App() {
   return (
@@ -31,6 +34,9 @@ function App() {
           <Route path='/Blogs' element={<Blogs/>} />
           <Route path='/booking' element={<Booking/>} />
           <Route path='/Appointment' element={<Appointment/>} />
+          <Route path='/login' element={<AuthForm/>} />
+          <Route path='/profile' element={<Profile/>} />
+          
         </Routes>
         <Footersection/>
       </div>

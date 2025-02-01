@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import { Appcontext } from '../Context/Context';
 
 const Hero = () => {
   const { scene } = useGLTF('/scene.gltf'); 
+  const {token}=useContext(Appcontext);
   const navigate=useNavigate();
+
+  const handlebooking=()=>{
+       if(!token){
+         navigate('/login');
+       }else{
+        navigate('booking');
+       }
+  }
 
   return (
 
@@ -50,7 +60,7 @@ const Hero = () => {
           Fast, efficient, and reliable deliveries at your doorstep with drone technology.
         </p>
         <a
-          onClick={()=>navigate('/booking')}
+          onClick={handlebooking}
           className="bg-yellow-500 cursor-pointer text-gray-900 py-3 px-6 rounded-lg text-xl hover:bg-yellow-400 transition duration-300"
         >
           Learn More
