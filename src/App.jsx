@@ -18,15 +18,15 @@ import { useState,useEffect } from "react";
 function App() {
 
  const [loading, setLoading] = useState(() => {
-    return localStorage.getItem("hasVisitedAbout") ? false : true;
+    return localStorage.getItem("hasVisitedApp") ? false : true;
   });
 
   useEffect(() => {
-    if (!localStorage.getItem("hasVisitedAbout")) {
+    if (!localStorage.getItem("hasVisitedApp")) {
       const timer = setTimeout(() => {
         setLoading(false);
-        localStorage.setItem("hasVisitedAbout", "true");
-      }, 3000);
+        localStorage.setItem("hasVisitedApp", "true");
+      },2000);
 
       return () => clearTimeout(timer);
     }

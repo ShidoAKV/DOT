@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
 import { motion } from "framer-motion";
+import Loader from "../assets/Loader";
 
 const About = () => {
  
@@ -29,7 +30,31 @@ const About = () => {
   ];
 
    const { scene } = useGLTF("/scifi_drone/scene.gltf", true);
+ 
+   const [loading, setLoading] = useState(() => {
+    return localStorage.getItem("hasVisitedAbout") ? false : true;
+  });
 
+  useEffect(() => {
+    if (!localStorage.getItem("hasVisitedAbout")) {
+      const timer = setTimeout(() => {
+        setLoading(false);
+        localStorage.setItem("hasVisitedAbout", "true");
+      },2000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [loading]);
+
+  
+  if (loading) {
+    return (
+      <div className="[background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)] h-screen w-screen">
+        <Loader/>
+    </div>
+    )
+  }
+  
   
 
   return (
