@@ -124,65 +124,41 @@ const Navbar = () => {
       >
         <a
           onClick={()=>navigate('/')}
-          className="block pl-8 px-4 py-2 transition-all duration-400 ease-linear hover:text-blue-300  text-lg"
+          className="block pl-8 px-4 py-2 transition-all duration-400 ease-linear hover:text-blue-300  text-lg cursor-pointer"
         >
          Home
         </a>
         <a
            onClick={()=>navigate('/about')}
-          className="block pl-8 px-4 py-2 transition-all duration-400 ease-linear hover:text-blue-300  text-lg"
+          className="block pl-8 px-4 py-2 transition-all duration-400 ease-linear hover:text-blue-300  text-lg cursor-pointer"
         >
           About
         </a>
         <a
            onClick={()=>navigate('/team')}
-          className="block pl-8 px-4 py-2 transition-all duration-400 ease-linear hover:text-blue-300  text-lg"
+          className="block pl-8 px-4 py-2 transition-all duration-400 ease-linear hover:text-blue-300  text-lg cursor-pointer"
         >
           Team
         </a>
         <a
            onClick={()=>navigate('/contact')}
-          className="block pl-8 px-4 py-2 transition-all duration-400 ease-linear hover:text-blue-300  text-lg"
+          className="block pl-8 px-4 py-2 transition-all duration-400 ease-linear hover:text-blue-300  text-lg cursor-pointer"
         >
           Contact us
         </a>
         <a
            onClick={()=>navigate('/Blogs')}
-          className="block pl-8 px-4 py-2 transition-all duration-400 ease-linear hover:text-blue-300  text-lg"
+          className="block pl-8 px-4 py-2 transition-all duration-400 ease-linear hover:text-blue-300  text-lg cursor-pointer"
         >
          Blogs
         </a>
         <a
            onClick={()=>navigate('/profile')}
-          className="block pl-8 px-4 py-2 transition-all duration-400 ease-linear hover:text-blue-300  text-lg"
+          className="block pl-8 px-4 py-2 transition-all duration-400 ease-linear hover:text-blue-300  text-lg cursor-pointer"
         >
-         Blogs
+         Profile
         </a>
-        
-          {/* <div
-            className={`overflow-hidden transition-[max-height,opacity,transform] duration-300 ease-in-out ${
-              dropdownOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
-            }`}
-          >
-            <a
-              href="#service1"
-              className="block pl-8 text-lg px-4 py-2 hover:bg-blue-600"
-            >
-              Service 1
-            </a>
-            <a
-              href="#service2"
-              className="block pl-8 text-lg px-4 py-2 hover:bg-blue-600"
-            >
-              Service 2
-            </a>
-            <a
-              href="#service3"
-              className="block pl-8 text-lg px-4 py-2 hover:bg-blue-600"
-            >
-              Service 3
-            </a>
-          </div> */}
+      
       </div>
     </nav>
   );

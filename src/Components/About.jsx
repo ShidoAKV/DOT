@@ -40,7 +40,7 @@ const About = () => {
       const timer = setTimeout(() => {
         setLoading(false);
         localStorage.setItem("hasVisitedAbout", "true");
-      },2000);
+      },1500);
 
       return () => clearTimeout(timer);
     }
