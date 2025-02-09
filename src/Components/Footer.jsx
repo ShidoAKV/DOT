@@ -6,7 +6,7 @@ const Footersection = () => {
   const navigate=useNavigate();
 
   return (
-    <footer className=" bg-neutral-100 text-neutral-600 dark:bg-black/60 dark:text-neutral-200 w-full border-t-[1px] border-t-white">
+    <footer className="align-baseline  bg-neutral-100 text-neutral-600 dark:bg-black/60 dark:text-neutral-200 w-full border-t-[1px] border-t-white ">
       {/* Top Section: Social Media */}
       <div className="flex flex-col items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:flex-row lg:justify-between">
         <div className="mb-4 lg:mb-0">
@@ -128,4 +128,4 @@ const Footersection = () => {
   );
 };
 
-export default Footersection;
+export default React.memo(Footersection);

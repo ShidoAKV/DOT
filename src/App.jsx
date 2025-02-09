@@ -12,9 +12,35 @@ import Booking from "./Components/Booking.jsx";
 import Appointment from "./Components/Appointment.jsx";
 import AuthForm from "./Components/AuthForm.jsx";
 import Profile from "./Components/Profile.jsx";
-
+import Loader from "./assets/Loader.jsx";
+import { useState,useEffect } from "react";
 
 function App() {
+
+ const [loading, setLoading] = useState(() => {
+    return localStorage.getItem("hasVisitedAbout") ? false : true;
+  });
+
+  useEffect(() => {
+    if (!localStorage.getItem("hasVisitedAbout")) {
+      const timer = setTimeout(() => {
+        setLoading(false);
+        localStorage.setItem("hasVisitedAbout", "true");
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [loading]);
+
+  
+  if (loading) {
+    return (
+      <div className="[background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)] h-screen w-screen">
+        <Loader />
+    </div>
+    )
+  }
+
   return (
     <>
       <div className="fixed overflow-x-hidden text-neutral-300 antialiased selection:bg-cyan-300 selection:text-cyan-900 h-screen w-screen [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
@@ -28,17 +54,16 @@ function App() {
               <Carousel />
             </>
           } />
-          <Route  path='/team' element={<Team/>}/>
+          <Route path='/team' element={<Team/>}/>
           <Route path='/contact' element={<Contact />} />
-          <Route path='/about' element={<About/>} />
           <Route path='/Blogs' element={<Blogs/>} />
           <Route path='/booking' element={<Booking/>} />
           <Route path='/Appointment' element={<Appointment/>} />
           <Route path='/login' element={<AuthForm/>} />
           <Route path='/profile' element={<Profile/>} />
-          
+          <Route path='/about' element={<About/>} />
         </Routes>
-        <Footersection/>
+        <Footersection />
       </div>
     </>
   );

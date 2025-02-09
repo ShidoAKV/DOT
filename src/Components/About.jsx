@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
 import { motion } from "framer-motion";
 
 const About = () => {
+ 
   const droneProperties = [
     {
       title: "Speed",
@@ -27,7 +28,9 @@ const About = () => {
     },
   ];
 
-  const { scene } = useGLTF("/scifi_drone/scene.gltf",true); // Path to your 3D model
+   const { scene } = useGLTF("/scifi_drone/scene.gltf", true);
+
+  
 
   return (
     <>
@@ -37,7 +40,7 @@ const About = () => {
         whileInView={{ opacity: 1, z: 0 }}
         animate={{ opacity: 1, z: 0, animation: "ease-in-out", delay: 2 }}
       >
-        <h1 className="text-5xl text-white text-center pb-20  pt-10 font-bold">DroneX Features</h1>
+        <h1 className="text-5xl text-white text-center pb-20 pt-10 font-bold">DroneX Features</h1>
         <div className="pt-24">
           <div
             className="slider"
@@ -63,13 +66,13 @@ const About = () => {
         </div>
       </motion.div>
 
-      <div className="sm:pl-7  sm:pt-20  h-screen flex flex-col md:flex-row items-center md:pl-28 sm:px-5  ">
+      <div className="sm:pl-7 sm:pt-20 h-screen flex flex-col md:flex-row items-center md:pl-28 sm:px-5">
         {/* Left Content */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}
-          className="text-white md:w-1/2 mb-10 md:mb-0  sm:mx-4  sm:mt-10"
+          className="text-white md:w-1/2 mb-10 md:mb-0 sm:mx-4 sm:mt-10"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-sky-200">
             The World's Most Efficient Delivery Drone
@@ -81,7 +84,7 @@ const About = () => {
         </motion.div>
 
         {/* Right Section - 3D Model Animation */}
-        <div className=" sm:w-full md:w-1/2 sm:h-[700px] md:h-[650px] flex justify-center items-center ">
+        <div className="sm:w-full md:w-1/2 sm:h-[700px] md:h-[650px] flex justify-center items-center">
           <motion.div
             className="w-full h-full"
             initial={{ y: -40 }}
@@ -111,21 +114,19 @@ const About = () => {
       </div>
 
       {/* New Section - Image and Text */}
-      <div className=" py-40  mt-56  px-5 flex flex-col md:flex-row items-center w-full">
-        <div className="sm:w-screen md:w-1/2  flex justify-center mb-10 md:mb-0">
+      <div className="py-40 mt-56 px-5 flex flex-col md:flex-row items-center w-full">
+        <div className="sm:w-screen md:w-1/2 flex justify-center mb-10 md:mb-0">
           <img
-            src="Drone1.webp" // Replace with your image URL
+            src="Drone1.webp"
             alt="Drone Image"
             className="sm:w-[650px] md:w-[500px] sm:h-[350px] md:h-[400px] object-cover rounded-lg shadow-lg"
           />
         </div>
-        <div className="sm:pl-7  text-white md:w-1/2 pl-0 md:pl-8">
+        <div className="sm:pl-7 text-white md:w-1/2 pl-0 md:pl-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-sky-200">
             More than an Idea
           </h2>
-          <p className="text-lg md:text-xl ">
-            This drone isn't theoretical; we've fully designed, built, and flown this aircraft.
-          </p>
+          <p className="text-lg md:text-xl">This drone isn't theoretical; we've fully designed, built, and flown this aircraft.</p>
           <p className="text-lg md:text-xl mb-6">
             Capable of performing real deliveries, DroneX TRT is the most efficient delivery drone in the world. Having flown thousands of kilometers, this aircraft is our first commercial-ready model.
           </p>
@@ -138,4 +139,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default React.memo(About);
