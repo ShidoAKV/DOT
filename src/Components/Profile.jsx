@@ -6,11 +6,11 @@ const Profile = () => {
     const {token} = useContext(Appcontext);
     const navigate=useNavigate();
 
-useEffect(() => {
-  if(!token){
-    navigate('/login');
-  }
-}, [token])
+    useEffect(() => {
+    if(!token){
+        navigate('/login');
+    }
+    }, [])
     
   return (
     <div>

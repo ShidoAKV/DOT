@@ -9,8 +9,8 @@ const Appcontextprovider = (props) => {
   };
 
   useEffect(() => {
-    setToken(localStorage.getItem('email'))
-  }, [token])
+     setToken(localStorage.getItem('email'))
+  }, [token]);
   
 
 

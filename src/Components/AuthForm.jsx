@@ -24,8 +24,9 @@ const AuthForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-  if(formData)  {
+  if(formData&&!token)  {
     localStorage.setItem('email',formData.email);
+    setToken(formData.email);
     navigate('/booking');
 
   }

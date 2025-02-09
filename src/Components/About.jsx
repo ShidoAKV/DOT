@@ -27,7 +27,7 @@ const About = () => {
     },
   ];
 
-  const { scene } = useGLTF("/scifi_drone/scene.gltf"); // Path to your 3D model
+  const { scene } = useGLTF("/scifi_drone/scene.gltf",true); // Path to your 3D model
 
   return (
     <>

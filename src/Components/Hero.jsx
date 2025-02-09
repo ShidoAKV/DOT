@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { Appcontext } from '../Context/Context';
 
 const Hero = () => {
-  const { scene } = useGLTF('/scene.gltf'); 
+  const { scene } = useGLTF('/scene.gltf',true); 
   const {token}=useContext(Appcontext);
   const navigate=useNavigate();
 
