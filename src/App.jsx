@@ -26,7 +26,7 @@ function App() {
       const timer = setTimeout(() => {
         setLoading(false);
         localStorage.setItem("hasVisitedApp", "true");
-      },1500);
+      },1200);
 
       return () => clearTimeout(timer);
     }
